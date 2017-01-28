@@ -2,18 +2,39 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
-	<style>
-		body{
-			margin: 0;
-			padding: 0;
-		}
-		canvas{
-		}
-	</style>
+	<title>Tennis Game</title>
+	<link rel="stylesheet" href="game.css">
 </head>
 <body>
-	<canvas id="targetCanvas" width="800" height="600"></canvas>
+	<div class="canvas_holder">
+		<canvas id="targetCanvas" width="800" height="600"></canvas>
+
+		<div id="settings_panel" class="settings_panel">
+			<h2>Setting Panel</h2>
+
+			<input type="text" name="name" id="name" class="name" placeholder="Set Player Name"><br>
+
+			<input type="text" name="speed" id="speed" class="speed" placeholder="Set Ball Speed"><br>
+			
+			<select name="" id="">
+				<option value="">Select Lavel</option>
+				<option value="">1</option>
+				<option value="">2</option>
+				<option value="">3</option>
+				<option value="">4</option>
+				<option value="">5</option>
+				<option value="">6</option>
+				<option value="">7</option>
+				<option value="">8</option>
+				<option value="">9</option>
+				<option value="">10</option>
+			</select>
+			
+			<button class="save" id="save">Save</button>
+
+		</div>
+	</div>
+	
 
 	<script src="game.js"></script>
 	
