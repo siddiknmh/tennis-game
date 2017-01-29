@@ -4,9 +4,9 @@
 		var ballx = 50;
 		var ballY = 50;
 
-		var ballSpeedX = 10;
-		var ballSpeedY = 5;
-		var playerName = "No name";
+		var ballSpeedX;
+		var ballSpeedY;
+		var playerName;
 
 		var paddle1Y = 250;
 		var paddle2Y = 250;
@@ -25,6 +25,8 @@
 			canvas = document.getElementById("targetCanvas");
 			canvasCtx = canvas.getContext("2d");
 			settingSave = document.getElementById("save");
+
+			
 			
 			var fremsPerSecond = 30;
 
@@ -40,21 +42,99 @@
 
 			canvas.addEventListener("mousemove", handelMouseMove);
 
+			userPanel();
+
+
+		}
+
+
+		function userPanel(){
+			var settingPanel = document.getElementById("settings_panel");
+
+			var innerPanelDiv = document.createElement("div");
+
+			var title = document.createElement("h2");
+			title.innerText = "Panel";
+
+			var nameInput = document.createElement("input");
+			nameInput.setAttribute("type", "text");
+			nameInput.setAttribute("id", "name");
+			nameInput.setAttribute("class", "name");
+			nameInput.setAttribute("placeholder", "Set player name");
+
+			var save = document.createElement("button");
+			save.setAttribute("class", "save");
+			save.setAttribute("id", "save");
+			save.innerText = "Save";
+
+			innerPanelDiv.appendChild(title);
+			innerPanelDiv.appendChild(nameInput);
+			innerPanelDiv.appendChild(save);
+
+			settingPanel.appendChild(innerPanelDiv);
+
+			console.log(settingPanel.appendChild(innerPanelDiv));
+
+			//settingPanel.insertBefore(nameInput, settingPanel.childNodes[0]);
 		}
 
 
 		function handleSetthingPanel(evt){
 
+			userPanel();
+
 			var settingPanel = document.getElementById("settings_panel");
-			var name = document.getElementById("name").value;
-			var speed = document.getElementById("speed").value;
+			//var name = document.getElementById("name").value;
+			//var level = document.getElementById("level").value;
+
+			var speed;
+
+			level = Number(level=10);
+
+
+			switch (level) {
+				case 1:
+					speed = 10;
+					break;
+				case 2:
+					speed = 12;
+					break;
+				case 3:
+					speed = 14;
+					break;
+				case 4:
+					speed = 16;
+					break;
+				case 5:
+					speed = 18;
+					break;
+				case 6:
+					speed = 20;
+					break;
+				case 7:
+					speed = 22;
+					break;
+				case 8:
+					speed = 24;
+					break;
+				case 9:
+					speed = 16;
+					break;
+				case 10:
+					speed = 28;
+					break;
+				default:
+					speed = 10;
+					break;
+			}
 
 		
 
 
 
-			if( name != "" && speed != ""){
+			if( name != "" ){
 				playerName = name;
+
 				ballSpeedX = speed;
 				ballSpeedY = speed/2;
 			}else {
@@ -68,8 +148,13 @@
 				player2Score = 0;
 				showingWinScren = false;
 			}	
+
+
+		
+
 			
 			settingPanel.setAttribute("class", "hide-div");
+
 
 		}
 
@@ -213,8 +298,6 @@
 			canvasCtx.arc(centerX, centerY, redious, 0, Math.PI*2, true);
 			canvasCtx.fill()
 		}
-
-
 
 		function colorRect(leftX, topY, width, height, drawColor){
 			canvasCtx.fillStyle = drawColor;

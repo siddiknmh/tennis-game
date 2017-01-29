@@ -1,50 +1,55 @@
 body{
-			margin: 0;
-			padding: 0;
-		}
-		.canvas_holder{
-			position: relative;
-			width: 100%;
-			height: 100%;
-			display: block;
-		}
-		canvas{
-			position: absolute;
-			top: 0;
-			right: 0; 
-			bottom: 0;
-			left: 0;
-			margin:0 auto;
-		}
-		.settings_panel{
-			background: #fff;
-			width: 400px;
-			height: 300px;
-			position: absolute;
-			top: 0;
-			right: 0; 
-			bottom: 0;
-			left: 0;
-			margin:150px auto;
-			text-align: center;
-		}
-		.settings_panel h2 {
-		    background: #96F;
-		    padding: 10px;
-		    margin: 0;
-		    color: #fff;
-		    font-family: arial;
-		}
-		.name,.speed{
-			padding: 5px;
-			margin:10px 0;
-		}
-		.save{
-			padding:5px 10px;
-			margin-top: 10px;
-			font-weight: bold;
-			text-transform: uppercase;
-		}
-		.hide-div{
-			display: none;
-		}
+	margin: 0;
+	padding: 0;
+}
+.canvas_holder{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+canvas{
+	position: absolute;
+	top: 0;
+	right: 0; 
+	bottom: 0;
+	left: 0;
+	margin:0 auto;
+}
+.settings_panel{
+	background: #fff;
+	width: 300px;
+	height: 200px;
+	position: absolute;
+	top: 0;
+	right: 0; 
+	bottom: 0;
+	left: 0;
+	margin:200px auto;
+	text-align: center;
+}
+.settings_panel h2 {
+    background: #96F;
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    font-family: arial;
+}
+.name{
+	padding: 5px;
+	margin:10px 0;
+	width: 50%;
+}
+.level{
+	width: 54%;
+	padding: 5px;
+	text-align: center;
+}
+.save{
+	padding:5px 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.hide-div{
+	display: none;
+}
